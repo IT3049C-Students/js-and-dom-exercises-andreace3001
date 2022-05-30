@@ -7,6 +7,8 @@ class StringFunctions {
      * capitalize('HELLO WORLD') // 'Hello world'
      */
     capitalize(input) { 
+      input = document.getElementById("capitalize").style.textTransform = "uppercase"
+      //got this from https://www.w3schools.com/jsref/prop_style_texttransform.asp
       return input; 
     }
     /**
@@ -17,6 +19,7 @@ class StringFunctions {
      * reverse('abc') // 'cba'
      */
     reverse(input) { 
+      input = document.getElementById("reverse").split("").reverse().join("");
       return input;
     }
     /**
@@ -26,7 +29,8 @@ class StringFunctions {
      * @example
      * words('hello world') // ['hello', 'world']
      */
-    split(input) { 
+    split(input,splitAt= ',') { 
+      input = document.getElementById("split").split(splitAt)
       return [input];
     }
 }
