@@ -8,7 +8,7 @@ class ArrayFunctions {
    * indexOf([1,2,3,5,6], 3); // 2
    */
   indexOf(arr, item) {
-    return ;
+    return arr.indexOf(item);
   }
 
   /**
@@ -19,8 +19,11 @@ class ArrayFunctions {
    * sum([1,2,3]); // 6
    */
   sum(arr) {
-    // Hint: use the reduce method
-    return ;
+    var sum = 0;
+    for (var i = 0; i < arr.length; i++){
+      sum += arr[i]
+    }
+    return sum;
   }
 
   /**
@@ -33,7 +36,7 @@ class ArrayFunctions {
    * filter([1,2,3,5,6,2,4,2], 2); // [1,3,5,6,4]
    */
   filterOut(arr, item) {
-    return ;
+    return arr.filter(i => i !== item);
   }
 
   /**
@@ -46,6 +49,7 @@ class ArrayFunctions {
    */
   append(arr, item) {
     // hint: push, slice, splice would all work. Pay attention to the return value in the docs
+    arr.push(item);
     return arr;
   }
 
@@ -58,7 +62,7 @@ class ArrayFunctions {
    * concat([1,2,3], [4,5,6]); // [1,2,3,4,5,6]
    */
   concat(arr1, arr2) {
-    return ;
+    return arr1.concat(arr2);
   }
 
   /**
@@ -68,8 +72,9 @@ class ArrayFunctions {
    * @example
    * square([1,2,4,5]); // [1,4,16,25]
    */
+  //Not sure why this is not working. Works on the 2-javascript0exercises of mine.
   square(arr) {
-    // hint: use .map
-    return ;
+    res = arr.map(x => x ** 2);
+  return res;
   }
 }
